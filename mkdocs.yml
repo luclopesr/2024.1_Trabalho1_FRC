@@ -1,0 +1,53 @@
+site_name: Cliente DNS - Trabalho 01 (FRC)
+repo_name: "2024.1_Trabalho1_FRC"
+repo_url: "https://github.com/luclopesr/trabalho01_FRC"
+theme:
+  name: material
+  language: "pt"
+  logo: assets/dns.png
+  favicon: assets/dns.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: teal
+      accent: green 
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+      primary: teal
+      accent: green
+  font:
+    text: "Montserrat"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: "Copyright &copy; 2024"
+
+nav:
+  - Início: index.md
