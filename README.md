@@ -1,6 +1,6 @@
 # Cliente DNS - Trabalho 01 (FRC)
 
-<div style="text-align:center"><img src= "assets/inicio.png"/></div>
+<div style="text-align:center"><img src= "docs/assets/inicio.png"/></div>
 
 ## Sobre a disciplina
 <p style="text-align: justify;">Documentação reservada ao trabalho 1 "Camada de Aplicação: Cliente DNS" da disciplina de Fundamentos de Redes de Computadores (FRC) da Universidade de Brasília (UnB - FGA), lecionada pelo professor Tiago Alves. Este trabalho tem como objetivo estudar a implementação de esquemas de comunicações entre processos (IPC), especificamente a utilização da interface socket.</p>
