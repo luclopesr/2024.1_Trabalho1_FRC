@@ -1,6 +1,6 @@
 site_name: Cliente DNS - Trabalho 01 (FRC)
 repo_name: "2024.1_Trabalho1_FRC"
-repo_url: "https://github.com/luclopesr/trabalho01_FRC"
+repo_url: "https://github.com/luclopesr/2024.1_Trabalho1_FRC"
 theme:
   name: material
   language: "pt"
