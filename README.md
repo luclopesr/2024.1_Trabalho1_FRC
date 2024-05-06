@@ -13,7 +13,9 @@ conhecimento das interações entre os diferentes hardwares que compõem um comp
 
 | **Foto** | **Nome** | **Matrícula** | **GitHub** |
 | :------: | :------: | :-----------: | :--------: |
+| <a href="https://github.com/ArturVinicius"><img src="https://avatars.githubusercontent.com/u/58870950?v=4" height="auto" width="90" style="border-radius:50%"></a> | Artur Vinicius Dias Nunes | 190142421 | [ArturVinicius](https://github.com/ArturVinicius) |
 | <a href="https://github.com/joaobisi"><img src="https://avatars.githubusercontent.com/u/111386960?v=4" height="auto" width="90" style="border-radius:50%"></a> | João Victor Max Bisinotti de Oliveira | 170069991 | [joaobisi](https://github.com/joaobisi) |
+| <a href="https://github.com/kessJhones"><img src="https://avatars.githubusercontent.com/u/49600484?v=4" height="auto" width="90" style="border-radius:50%"></a> | Kess Jhones Gomes Tavares | 180124498 | [kessJhones](https://github.com/kessJhones) |
 | <a href="https://github.com/luclopesr"><img src="https://avatars.githubusercontent.com/u/88348202?v=4" height="auto" width="90" style="border-radius:50%"></a> | Lucas Lopes Rocha | 202023903 | [luclopesr](https://github.com/luclopesr) |
 
 ---
