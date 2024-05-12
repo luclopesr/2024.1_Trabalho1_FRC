@@ -1,29 +1,4 @@
-# Cliente DNS - Trabalho 01 (FRC)
-
-<div style="text-align:center"><img src= "docs/assets/inicio.png"/></div>
-
-## Sobre a disciplina
-<p style="text-align: justify;">Documentação reservada ao trabalho 1 "Camada de Aplicação: Cliente DNS" da disciplina de Fundamentos de Redes de Computadores (FRC) da Universidade de Brasília (UnB - FGA), lecionada pelo professor Tiago Alves. Este trabalho tem como objetivo estudar a implementação de esquemas de comunicações entre processos (IPC), especificamente a utilização da interface socket.</p>
-
-<p style="text-align: justify;">A disciplina de Fundamentos de Redes de Computadores trata de diversos tópicos relativos a Sistemas Operacionais, sistemas que provêem uma forma intuitiva de se utilizar as funcionalidades de computadores digitais sem que seja necessário ao usuário ou programador ter profundo
-conhecimento das interações entre os diferentes hardwares que compõem um computador.</p>
-
-
-## Contribuidores
-
-| **Foto** | **Nome** | **Matrícula** | **GitHub** |
-| :------: | :------: | :-----------: | :--------: |
-| <a href="https://github.com/ArturVinicius"><img src="https://avatars.githubusercontent.com/u/58870950?v=4" height="auto" width="90" style="border-radius:50%"></a> | Artur Vinicius Dias Nunes | 190142421 | [ArturVinicius](https://github.com/ArturVinicius) |
-| <a href="https://github.com/joaobisi"><img src="https://avatars.githubusercontent.com/u/111386960?v=4" height="auto" width="90" style="border-radius:50%"></a> | João Victor Max Bisinotti de Oliveira | 170069991 | [joaobisi](https://github.com/joaobisi) |
-| <a href="https://github.com/kessJhones"><img src="https://avatars.githubusercontent.com/u/49600484?v=4" height="auto" width="90" style="border-radius:50%"></a> | Kess Jhones Gomes Tavares | 180124498 | [kessJhones](https://github.com/kessJhones) |
-| <a href="https://github.com/luclopesr"><img src="https://avatars.githubusercontent.com/u/88348202?v=4" height="auto" width="90" style="border-radius:50%"></a> | Lucas Lopes Rocha | 202023903 | [luclopesr](https://github.com/luclopesr) |
-
-
 # Documentação da aplicação
-
-Para melhor visualização desta documentação, acesso a página Wiki deste projeto acessando o [LINK](https://luclopesr.github.io/2024.1_Trabalho1_FRC/).
-
-## Ferramentas Utilizadas
 
 Para construção dessa aplicação foi utilizado o sistema operacional Ubuntu (Linux). Além disso, o ambiente de desenvolvimento usado foi o <a href="https://code.visualstudio.com/">Visual Studio Code</a>.
 
