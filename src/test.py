@@ -13,7 +13,7 @@ def dns_query(domain_name, dns_server):
         transaction_id = random.randint(0, 65535)
 
         # Montar o payload da consulta DNS
-        query_payload = struct.pack('!HBBHHHH', transaction_id, 1, 0, 1, 0, 0, 0)
+        query_payload = struct.pack('!HHHHHH', transaction_id, 0x0100, 1, 0, 0, 0)
         # Adicionar o nome do domínio à consulta
         for part in domain_name.split('.'):
             query_payload += struct.pack('B', len(part))
@@ -21,22 +21,32 @@ def dns_query(domain_name, dns_server):
         # Terminar o nome do domínio
         query_payload += b'\x00'
         # Adicionar o tipo de consulta NS
-        query_payload += struct.pack('!H', 2)
-        # Adicionar a classe de consulta IN
-        query_payload += struct.pack('!H', 1)
+        query_payload += struct.pack('!HH', 2, 1)
 
-        # Enviar a consulta para o servidor DNS
-        client_socket.sendto(query_payload, (dns_server, 53))
+        # Tentar resolver o nome até 3 vezes
+        for _ in range(3):
+            # Enviar a consulta para o servidor DNS
+            client_socket.sendto(query_payload, (dns_server, 53))
 
-        # Receber a resposta do servidor DNS
-        response, _ = client_socket.recvfrom(1024)
+            # Receber a resposta do servidor DNS
+            try:
+                response, _ = client_socket.recvfrom(1024)
+            except socket.timeout:
+                continue  # Tentar novamente se não houver resposta em 2 segundos
+            else:
+                break  # Se a resposta for recebida, sair do loop
+
+        # Se não houver resposta após 3 tentativas, informar o usuário
+        else:
+            print(f"Nao foi possível coletar entrada NS para {domain_name}")
+            return
 
         # Interpretar a resposta
         num_answers = struct.unpack('!H', response[6:8])[0]
         if num_answers == 0:
             print(f"Dominio {domain_name} nao encontrado")
         else:
-            print(f"Resultado para {domain_name}:")
+            print(f"Resultados para {domain_name}:")
             offset = response.find(b'\xc0\x0c') + 12  # Início das respostas
             for _ in range(num_answers):
                 # Verificar se estamos na seção de respostas de autoridade (NS)
@@ -49,13 +59,10 @@ def dns_query(domain_name, dns_server):
                 # Avançar para o próximo registro
                 offset += 12 + domain_length
 
-    except socket.timeout:
-        print(f"Nao foi possível coletar entrada NS para {domain_name}")
     except Exception as e:
         print(f"Erro: {e}")
     finally:
-        if 'client_socket' in locals():
-            client_socket.close()
+        client_socket.close()
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
