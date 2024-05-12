@@ -38,7 +38,7 @@ Antes de executar a aplicação, certifique-se de ter o Python3 instalado no seu
 
 2. Navegue até o diretório onde o clone do repositório está localizado.
 
-3. Execute o seguinte comando, substituindo <nome_dominio> pelo nome do domínio que deseja consultar e <ip_servidor_dns> pelo endereço IP do servidor DNS:
+3. Execute o seguinte comando, substituindo `<nome_dominio>` pelo nome do domínio que deseja consultar e `<ip_servidor_dns>` pelo endereço IP do servidor DNS:
 
     ```bash
     python3 src/cliente_dns.py <nome_dominio> <ip_servidor_dns>
