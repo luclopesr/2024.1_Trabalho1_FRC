@@ -55,9 +55,9 @@ def dns_query(domain_name, dns_server):
                 # Ler o comprimento do domínio e extrair o nome do servidor de e-mail
                 domain_length = response[offset]
                 mail_server = response[offset + 1: offset + 1 + domain_length]
-                print(f"{domain_name} <> {mail_server.decode()}.{domain_name}")
+                print(f"{domain_name} <> {mail_server.decode(errors='replace')}.{domain_name}")
                 # Avançar para o próximo registro
-                offset += 12 + domain_length
+                offset += 1 + domain_length + 10
 
     except Exception as e:
         print(f"Erro: {e}")
